@@ -1,0 +1,180 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'julyapp/css/fonts.css' %}" />
+    <link rel="stylesheet" href="{% static 'julyapp/css/fonts (2).css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/674b91924c.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'julyapp/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'julyapp/css/icomoon/style.css' %}" />
+    <!-- <link rel="stylesheet" href="./css/loader.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="{% static 'julyapp/css/aos.css' %}" />
+  </head>
+  <body>
+    <!-- Page wrapper -->
+    <div class="page-wrapper">
+      <header class="header js-header">
+        <div class="containers">
+          <input type="checkbox" name="" id="show-burger" />
+          <div class="logo">
+            <a href="{{index}}">
+              <img src="{% static 'julyapp/images/heart.svg' %}" alt="" /><span>HealthWise</span>
+            </a>
+          </div>
+          <nav>
+            <label for="show-burger">
+              <i class="icon-close closebtn"></i>
+            </label>
+            <ul>
+              <li><a href="#header" class="active">Home</a></li>
+              <li><a href="{% url 'company' %}">Company</a></li>
+              <li><a href="{% url 'services' %}">Services</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="contact">
+            <a href="tel:00000000000">
+              <p>(123) 456-7890</p>
+            </a>
+          </div>
+          <div class="button" id="clickbtn">
+            <a href="./contact.html">
+              <button>Book Now</button>
+            </a>
+          </div>
+          <label for="show-burger">
+            <div class="contact" id="contact">
+              <a href="tel:00000000000">
+                <p>(123) 456-7890</p>
+              </a>
+              <i class="icon-bars" id="closebtn"></i>
+            </div>
+          </label>
+        </div>
+      </header>
+      <!-- Page wrapper -->
+      <div class="page-wrapper">
+        <header class="header js-header">
+          <div class="containers">
+            <input type="checkbox" name="" id="show-burger" />
+            <div class="logo">
+              <a href="./index.html">
+                <img src="{% static 'julyapp/images/heart.svg' %}" alt="" /><span>HealthWise</span>
+              </a>
+            </div>
+            <nav>
+              <label for="show-burger">
+                <i class="icon-close closebtn"></i>
+              </label>
+              <ul>
+                <li><a href="#header" class="active">Home</a></li>
+                <li><a href="{% url 'company' %}">Company</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="contact">
+              <a href="tel:00000000000">
+                <p>(123) 456-7890</p>
+              </a>
+            </div>
+            <div class="button" id="clickbtn">
+              <a href="./contact.html">
+                <button>Book Now</button>
+              </a>
+            </div>
+            <label for="show-burger">
+              <div class="contact" id="contact">
+                <a href="tel:00000000000">
+                  <p>(123) 456-7890</p>
+                </a>
+                <i class="icon-bars" id="closebtn"></i>
+              </div>
+            </label>
+          </div>
+        </header>
+
+      
+    {% block content%}
+    
+    
+    {% endblock %}
+
+    <div class="scroll-arrow" id="movetop">
+        <a href="#top-header">
+          <i class="icon-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+  
+
+            <!-- footer section -->
+            <footer>
+                <div class="container">
+                  <div class="grid">
+                    <div class="footer-1">
+                      <div class="logo">
+                        <a href="">
+                          <img src="{% static 'julyapp/images/heart.svg' %}" alt="" /><span>HealthWise</span>
+                        </a>
+                      </div>
+                      <p>
+                        Build a better website for your medical and <br />
+                        healthcare business today.
+                      </p>
+                      <div class="icons">
+                        <i class="icon-facebook"></i>
+                        <i class="icon-instagram insta-left"></i>
+                        <i class="icon-twitter twi-left"></i>
+                      </div>
+                    </div>
+                    <div class="footer-2">
+                      <h5>Product</h5>
+                      <ul>
+                        <li><a href="{{'index'}}">Home</a></li>
+                        <li><a href="{{'services'}}">Services</a></li>
+                        <li><a href="#blog-section">Blog</a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-3">
+                      <h5>Company</h5>
+                      <ul>
+                        <li><a href="{{'/contact/'}}">Contact</a></li>
+                        <li><a href="{{'company'}}">Company</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+        
+              <div class="scroll-arrow" id="movetop">
+                <a href="#top-header">
+                  <i class="icon-arrow-down"></i>
+                </a>
+              </div>
+            </div>
+        
+            <!-- <script src="https://cdn.jsdelivr.net/gh/AmagiTech/JSLoader/amagiloader.js"></script> -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script></script>
+            <script src="{% static 'julyapp/js/script.js' %}"></script>
+            <script src="{% static 'julyapp/js/aos.js' %}"></script>
+            <script>
+              AOS.init({
+                duration: 800,
+                easing: "slide",
+              });
+            </script>
+          </body>
+        </html>
+        

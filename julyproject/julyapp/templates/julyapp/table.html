@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <thead>
+        <tr>
+            <th colspan="2">Firstname</th>
+            <th colspan="2">lastname</th>
+            <th colspan="2">Phonenumber</th>
+            <th colspan="2">Email</th>
+            <th colspan="2">Messages</th>
+            <th colspan="2">Filter</th>
+    </tr>
+</thead>
+<tbody>
+    {% for form in data %}
+
+    <tr>
+        <td colspan="2">{{form.firstname}}</td>
+        <td colspan="2">{{form.lastname}}</td>
+        <td colspan="2">{{form.phonenumber}}</td>
+        <td colspan="2">{{form.email}}</td>
+        <td colspan="2">{{form.messages}}</td>
+        <td><a href="{% url 'update' form.pk %}">Edit</a></td>
+        <td><a href="{% url 'delete' form.pk %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+    </table>
+</body>
+</html>
